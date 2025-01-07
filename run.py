@@ -8,14 +8,14 @@ def main():
     if len(sys.argv) < 3:
         print("Usage: python <lib> <file>")
         print("Example: python vision file.pdf")
+        print("Example: python pdfium book.pdf")
         sys.exit(1)
 
     init_time = time.time()
     module = importlib.import_module("libs." + sys.argv[1])
     init_time = time.time() - init_time
 
-    file_name = sys.argv[2]
-    with open(file_name, "rb") as f:
+    with open(sys.argv[2], "rb") as f:
         input = f.read()
 
     pdf2txt: Callable[[bytes], str] = module.pdf2txt
