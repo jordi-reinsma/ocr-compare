@@ -1,7 +1,7 @@
 import importlib
 import sys
 import time
-from typing import Callable
+import typing
 
 
 def main():
@@ -18,7 +18,7 @@ def main():
     with open(sys.argv[2], "rb") as f:
         input = f.read()
 
-    pdf2txt: Callable[[bytes], str] = module.pdf2txt
+    pdf2txt: typing.Callable[[bytes], str] = module.pdf2txt
 
     exec_time = time.time()
     output = pdf2txt(input)

@@ -1,7 +1,8 @@
-# PDF to image converter
+# https://github.com/pypdfium2-team/pypdfium2
 pypdfium2==4.30.1
-
-# OCR libraries
+# https://github.com/JaidedAI/EasyOCR
 easyocr==1.7.2
+# https://cloud.google.com/python/docs/reference/vision/latest
 google-cloud-vision==3.9.0
+# https://github.com/sirfz/tesserocr
 tesserocr==2.7.1
